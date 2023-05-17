@@ -1,0 +1,25 @@
+package in.ineuron.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import in.ineuron.client.StockClient;
+
+@Service
+public class StockAmountServiceImpl implements IStockAmountService {
+	
+	@Autowired
+	private StockClient stockClient;
+
+	@Override
+	public Double stockPriceCalculate(String company, Integer quantity) {
+		
+		ResponseEntity<Double> response = stockClient.getStockPrice(company);
+		
+		System.out.println(response);
+		
+		return null;
+	}
+
+}

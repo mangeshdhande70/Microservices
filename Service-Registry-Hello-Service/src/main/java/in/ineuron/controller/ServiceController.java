@@ -1,0 +1,17 @@
+package in.ineuron.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ServiceController {
+	
+	@GetMapping(value = "/hello/{name}")
+	public String hiMsg(@PathVariable String name) {
+		
+		String msg = "Hello "+name+", I'm Good";
+		return msg;	
+	}
+
+}

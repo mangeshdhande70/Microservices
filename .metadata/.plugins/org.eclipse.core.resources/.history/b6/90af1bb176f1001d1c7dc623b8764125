@@ -1,0 +1,27 @@
+package in.ineuron.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class StockUIController {
+	
+	@GetMapping(value = "/")
+	public String loadPage() {
+		
+		return "index";
+	}
+	
+	
+	@GetMapping(value = "/getTotalCost")
+	public String getTotalCost(HttpServletRequest request) {
+		
+		String companyName = request.getParameter("companyName");
+		String quantity = request.getParameter("quantity");
+		
+		return "index";
+	}
+
+}

@@ -1,0 +1,11 @@
+server.port=4444
+spring.application.name=Stock-API-Gateway
+zuul.prefix=/api
+
+#MS-Stock-Dao-Service
+zuul.routes.pric.path=/price/**
+zuul.routes.pric.service-id=STOCK-DAO-SERVICE
+
+#MS-Stock-Calculation-Service
+zuul.routes.calc.path=/calc/**
+zuul.routes.calc.service-id=STOCK-Calculation-Service

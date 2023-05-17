@@ -1,0 +1,20 @@
+package in.ineuron.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ineuron.client.PriceClient;
+
+@Service
+public class StockAmountServiceImpl implements IStockAmountService {
+	
+	@Autowired
+	private PriceClient priceClient;
+
+	@Override
+	public Double stockPriceCalculate(String company, Integer quantity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

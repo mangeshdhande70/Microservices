@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stock Market</title>
+</head>
+<body>
+
+    <h1>Get Stock Price</h1>
+    
+     <h1 th:text="${msg}"></h1>
+
+	<form action="#" th:action="@{/getTotalCost}"  method="get">
+		<label for="company-name">Company Name:</label> <input type="text"
+			id="companyName" name="companyName"><br>
+		<br> <label for="quantity">Quantity:</label> <input type="text"
+			id="quantity" name="quantity"><br>
+		<br>
+
+		<button type="submit" name="Get Cost">Get</button>
+	</form>
+
+
+</body>
+</html>

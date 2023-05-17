@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stock Market</title>
+</head>
+<body>
+
+	<form action="get" th:action="@{/get}" method="post">
+		<label for="company-name">Company Name:</label> <input type="text"
+			id="company-name" name="companyName"><br>
+		<br> <label for="quantity">Quantity:</label> <input type="text"
+			id="quantity" name="quantity"><br>
+		<br>
+
+		<button type="submit" name="submitButton">Get</button>
+	</form>
+
+
+</body>
+</html>
